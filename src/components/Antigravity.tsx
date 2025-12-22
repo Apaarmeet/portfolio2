@@ -1,5 +1,6 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import React, { useMemo, useRef } from 'react';
+//@ts-ignore
 import * as THREE from 'three';
 
 interface AntigravityProps {

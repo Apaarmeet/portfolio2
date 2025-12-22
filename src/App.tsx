@@ -1,6 +1,6 @@
 import Background from './components/Background';
 import Intro from './components/Intro';
-import ScrollFloat from './components/LibraryComponents/ScrollFloat';
+// import ScrollFloat from './components/LibraryComponents/ScrollFloat';
 import TargetCursor from './components/LibraryComponents/TargetCursor';
 import Loop from './components/Loop';
 function App() {

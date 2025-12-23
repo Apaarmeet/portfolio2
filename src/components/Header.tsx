@@ -3,11 +3,11 @@ import Shuffle from './LibraryComponents/Shuffle'
 function Header() {
   return (
     <div>
-      <div className=' flex justify-between items-center'>
-            <div className=' h-96 w-96 ml-4 mt-4' style={{ pointerEvents: 'auto' }}>
-              <img src="/profile.jpg" alt="" className='cursor-target rounded-full h-72' />
+      <div className=' md:flex md:justify-between md:items-center flex justify-between p-4 '>
+            <div className=' h-96 w-96 pointer-events-auto -ml-1'>
+              <img src="/profile.jpg" alt="" className='cursor-target rounded-full md:pl-1 md:h-72 h-32 md:h-44' />
             </div>
-            <div className=' pointer-events-auto pr-6 ' >
+            <div className=' pointer-events-auto md:p-2 md:-mt-4 pt-9 pr-4 ' >
                 <Shuffle
                     text="Apaarmeet"
                     shuffleDirection="right"
@@ -21,7 +21,7 @@ function Header() {
                     triggerOnHover={true}
                     respectReducedMotion={true}
                     tag={"span"}
-                    className=' cursor-target text-8xl font-pixelify text-neutral-200'
+                    className=' cursor-target text-4xl md:text-8xl font-pixelify text-neutral-200'
                     />
             </div>
       </div>

@@ -2,32 +2,31 @@ import FadeContent from './LibraryComponents/FadeContent';
 
 const projects = [
   {
-    title: 'Real-time Chat Application',
-    description: 'Built a scalable chat platform with Socket.IO, Redis pub/sub, and React. Supports 10k+ concurrent users with typing indicators and presence detection.',
-    tech: ['React', 'Socket.IO', 'Node.js', 'Redis', 'MongoDB'],
-    link: '#',
-    github: '#',
+    title: 'DevSync – Collaborative Code Editor',
+    description: 'Real-time collaborative editing with sub-100ms latency using Socket.IO rooms. Integrated Monaco Editor to replicate VS Code-like UX directly in the browser. Designed scalable state sync logic for multi-user editing with live cursor sync.',
+    tech: ['React', 'Tailwind', 'Node.js', 'Express', 'Socket.IO', 'Monaco'],
+    link: 'devsync.apaarmeet.dev/',
+    github: 'https://github.com/Apaarmeet/DevSync',
   },
   {
-    title: 'AI-Powered Code Assistant',
-    description: 'Chrome extension integrating GPT-4 for intelligent code suggestions and documentation generation. 50k+ active users.',
-    tech: ['TypeScript', 'OpenAI API', 'Chrome APIs', 'Webpack'],
-    link: '#',
-    github: '#',
+    title: 'Aura Browse – AI Voice Assistant',
+    description: 'Chrome extension for hands-free browser automation using Web Speech API + Google Gemini. Enabled natural language actions like navigation, search, and tab control. Reduced user interaction steps by up to 80% for common browsing tasks.',
+    tech: ['React', 'TypeScript', 'Gemini AI', 'Speech API'],
+    github: 'https://github.com/Apaarmeet/Aura-Browse',
   },
   {
-    title: 'Cloudflare Workers API',
-    description: 'Edge computing API with sub-50ms global response times. Handles 1M+ requests/day with automatic scaling and caching.',
-    tech: ['Cloudflare Workers', 'TypeScript', 'D1', 'R2'],
-    link: '#',
-    github: '#',
+    title: 'Medium Clone',
+    description: 'End-to-end SaaS-style blogging system with type-safe APIs. Deployed backend on Cloudflare Workers for low-latency global performance. Shared Zod schemas between frontend and backend to ensure 100% type consistency with secure JWT auth.',
+    tech: ['React', 'TypeScript', 'Cloudflare Workers', 'Hono', 'JWT', 'Zod'],
+    link:"medium-clone-nine-mauve.vercel.app",
+    github: 'https://github.com/Apaarmeet/Medium-clone',
   },
   {
-    title: 'Real-time Analytics Dashboard',
-    description: 'Live analytics platform processing 100k+ events per second. Built with WebSockets, time-series DB, and React visualizations.',
-    tech: ['Next.js', 'PostgreSQL', 'TimescaleDB', 'Chart.js'],
-    link: '#',
-    github: '#',
+    title: 'Chatty',
+    description: 'Real-time 1:1 chat system with typing indicators and user presence. Implemented WebSocket architecture capable of handling scalable user sessions. Added theme switching and responsive UI with secure backend using JWT and MongoDB.',
+    tech: ['React', 'Vite', 'Socket.IO', 'MongoDB', 'Express', 'JWT'],
+    link: 'https://fullstack-chat-app-n3mi.onrender.com/',
+    github: 'https://github.com/Apaarmeet/fullstack-chat-app',
   },
 ];
 
@@ -69,7 +68,7 @@ function Projects() {
                 }}
               >
                 {/* Gradient glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#3d3d42]/0 via-[#3d3d42]/10 to-[#3d3d42]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-[#3d3d42]/0 via-[#3d3d42]/10 to-[#3d3d42]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 <div className="relative">
                   {/* Title */}
@@ -103,30 +102,40 @@ function Projects() {
                   </div>
 
                   {/* Links */}
-                  <div className="flex gap-4">
-                    <a
-                      href={project.link}
-                      className="
-                        text-sm font-pixelify
-                        text-neutral-200/70 hover:text-neutral-200
-                        transition-colors duration-300
-                        flex items-center gap-2
-                      "
-                    >
-                      <span>🔗</span> Live Demo
-                    </a>
-                    <a
-                      href={project.github}
-                      className="
-                        text-sm font-pixelify
-                        text-neutral-200/70 hover:text-neutral-200
-                        transition-colors duration-300
-                        flex items-center gap-2
-                      "
-                    >
-                      <span>💻</span> Source Code
-                    </a>
-                  </div>
+                  {(project.link || project.github) && (
+                    <div className="flex gap-4">
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="
+                            text-sm font-pixelify
+                            text-neutral-200/70 hover:text-neutral-200
+                            transition-colors duration-300
+                            flex items-center gap-2
+                          "
+                        >
+                          <span>🔗</span> Live Demo
+                        </a>
+                      )}
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="
+                            text-sm font-pixelify
+                            text-neutral-200/70 hover:text-neutral-200
+                            transition-colors duration-300
+                            flex items-center gap-2
+                          "
+                        >
+                          <span>💻</span> Source Code
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

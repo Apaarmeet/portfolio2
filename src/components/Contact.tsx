@@ -10,20 +10,20 @@ const socialLinks = [
   {
     name: 'LinkedIn',
     icon: '💼',
-    url: '#',
+    url: 'https://www.linkedin.com/in/apaarmeet-singh-67290b28b/',
     handle: 'Apaarmeet Singh',
   },
   {
     name: 'Twitter',
     icon: '🐦',
-    url: '#',
+    url: 'https://x.com/apaarmeet',
     handle: '@apaarmeet',
   },
   {
     name: 'Email',
     icon: '📧',
-    url: 'mailto:your.email@example.com',
-    handle: 'your.email@example.com',
+    url: 'mailto:apaarmeet5000@gmail.com',
+    handle: 'apaarmeet5000@gmail.com',
   },
 ];
 
@@ -101,7 +101,7 @@ function Contact() {
               Interested in full-stack roles at fast-moving startups building real-time, AI-powered, or cloud-native products
             </p>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:apaarmeet5000@gmail.com"
               className="
                 cursor-target
                 inline-block
@@ -123,7 +123,7 @@ function Contact() {
           {/* Footer */}
           <div className="mt-16 pt-8 border-t border-[#3d3d42]/30">
             <p className="text-neutral-200/40 text-sm font-pixelify">
-              Built with React, TypeScript & Tailwind CSS • © 2025 Apaarmeet Singh
+              Built with ❤️ <br/>  Apaarmeet Singh ©
             </p>
           </div>
         </div>

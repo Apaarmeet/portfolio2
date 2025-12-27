@@ -5,7 +5,7 @@ function Header() {
     <div>
       <div className=' md:flex md:justify-between md:items-center flex justify-between gap-10 p-4 '>
             <div className=' md:h-52 md:w-52 h-32 w-32 pointer-events-auto -ml-1'>
-              <img src="/profile.jpg" alt="" className='cursor-target rounded-full md:pl-1' />
+              <img src="/profile.jpeg" alt="" className='cursor-target rounded-full md:pl-1' />
             </div>
             <div className='  pointer-events-auto md:p-2 md:-mt-4 pt-9 pr-4 ' >
                 <Shuffle

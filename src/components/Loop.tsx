@@ -10,7 +10,7 @@ function Loop() {
           curveAmount={200}
           direction="left"
           interactive={true}
-          className=" text-6xl text-neutral-200  pointer-events-auto"
+          className="  md:text-6xl text-neutral-200  pointer-events-auto"
         />
     </div>
   )

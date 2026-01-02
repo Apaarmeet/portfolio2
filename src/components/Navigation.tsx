@@ -29,6 +29,13 @@ function Navigation() {
   }, []);
 
   const scrollToSection = (id: string) => {
+    if (id === 'resume') {
+      // Open resume in new tab - update this URL to your actual resume link
+      window.open('https://drive.google.com/file/d/1pOc5q7jtaeeiLYQFhw_23DyBk_UNZXNg/view?usp=sharing', '_blank');
+      setMobileMenuOpen(false);
+      return;
+    }
+    
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -46,13 +53,13 @@ function Navigation() {
       >
         <div className="max-w-xl mx-auto px-4 md:px-6">
           <div className={`
-            flex justify-center items-center gap-8
+            flex justify-center items-center gap-7
             border border-[#3d3d42]/50 rounded-full px-8 py-4
             bg-[#151D2E]/80 backdrop-blur-md
             transition-all duration-300 pointer-events-auto
             ${scrolled ? 'shadow-lg shadow-black/20' : ''}
           `}>
-            {['Home', 'Skills', 'Projects', 'Contact'].map((item) => (
+            {['Home', 'Skills', 'Projects', 'Contact', 'Resume'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -100,7 +107,7 @@ function Navigation() {
           shadow-lg shadow-black/20
           overflow-hidden
         ">
-          {['Home', 'Skills', 'Projects', 'Contact'].map((item, index) => (
+          {['Home', 'Skills', 'Projects', 'Contact' , 'Resume'].map((item, index) => (
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase())}
